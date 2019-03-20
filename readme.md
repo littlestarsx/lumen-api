@@ -1,21 +1,35 @@
-# Lumen PHP Framework
+# Lumen + Dingo Api + Jwt 
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+### 克隆
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+```shell
+git clone https://github.com/littlestarsx/lumen-api.git
 
-## Official Documentation
+```
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+### 安装依赖
 
-## Security Vulnerabilities
+```shell
+composer install
+```
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+### 配置
 
-## License
+```shell
+cp .env.example .env
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#增加Dingo Api配置
+#访问api.test.com/api/test
+#API_PREFIX=api
+#访问api.test.com/test
+API_DOMAIN=api.test.com
+API_STANDARDS_TREE=vnd
+API_SUBTYPE=lumen-api
+API_VERSION=v1
+API_NAME="Lumen Api"
+#条件请求，默认开启可以关闭
+API_CONDITIONAL_REQUEST=false
+#严格模式
+API_STRICT=false
+API_DEBUG=true
+```
